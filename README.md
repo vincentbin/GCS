@@ -5,7 +5,7 @@ A multi-server group chat system based on netty.
 1：自定义协议解决TCP沾包问题。<br/>
 2：基于NIO IO多路复用，支持超高连接数。<br/>
 3：服务端通过zookeeper进行服务注册，支持服务端拓展增加服务能力。<br/>
-4：客户端通过自身信息hash决定与哪个主机建立netty长连接。
+4：客户端通过自身信息hash决定与哪个主机建立netty长连接。<br/>
 5：服务端宕机，客户端自动接入其他健康主机。
 ***
 ## Getting Start
