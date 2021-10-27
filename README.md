@@ -23,7 +23,6 @@ A multi-server group chat system based on netty.
 v1: 注册中心ip:port 字符串 (zk集群则字符串之间用","连接即可)<br/>
 v2: clientName 字符串<br/>
 com.polyu.gcs.client.Client.start(v1, v2)<br/>
-<br/>
 ### 服务端启动
 v1: 服务端ip:port 字符串<br/>
 v2: 注册中心ip:port 字符串<br/>
