@@ -11,6 +11,7 @@ import org.apache.curator.framework.state.ConnectionStateListener;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.Watcher;
+import org.apache.zookeeper.data.Stat;
 
 import java.util.List;
 
@@ -36,6 +37,11 @@ public class CuratorClient {
                 NameSpaceEnum.ZK_SESSION_TIMEOUT.getTimeOutLength(),
                 NameSpaceEnum.ZK_CONNECTION_TIMEOUT.getTimeOutLength()
         );
+    }
+
+    public boolean checkPath(String path) throws Exception {
+        Stat status = client.checkExists().forPath(path);
+        return status != null;
     }
 
     public void addConnectionStateListener(ConnectionStateListener connectionStateListener) {

@@ -1,6 +1,5 @@
 package com.polyu.gcs.server.connect;
 
-import com.polyu.gcs.common.info.RegistryPackage;
 import io.netty.channel.Channel;
 
 import java.util.List;

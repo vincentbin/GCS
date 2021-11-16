@@ -86,6 +86,9 @@ public class RegistryCenter {
     }
 
     public void pullServerInfo() throws Exception {
+        if (!zkClient.checkPath(NameSpaceEnum.ZK_REGISTRY_PATH.getValue())) {
+            return;
+        }
         List<String> nodeList = zkClient.getChildren(NameSpaceEnum.ZK_REGISTRY_PATH.getValue());
         for (String node : nodeList) {
             byte[] bytes = zkClient.getData(NameSpaceEnum.ZK_REGISTRY_PATH.getValue().concat("/").concat(node));
